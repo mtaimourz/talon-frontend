@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Bricolage";
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/bricolage-grotesque.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Plex";
+  font-weight: 100 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/ibm-plex-sans.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JBMono";
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/jetbrains-mono.woff2") format("woff2");
+}
+
+:root {
+  --bg: #f3f1f4;
+  --surface: #ffffff;
+  --surface-2: #f7f5f8;
+  --border: #e1dce4;
+  --text: #201a22;
+  --text-2: #5b5460;
+  --text-3: #8b8590;
+  --accent: #2a4e99;
+  --accent-ink: #ffffff;
+  --accent-wash: #2a4e9914;
+  --good: #2e8f5c;
+  --good-wash: #2e8f5c14;
+  --warn: #a87c1f;
+  --warn-wash: #a87c1f14;
+  --bad: #c23b2e;
+  --bad-wash: #c23b2e14;
+  --grid-line: #00000006;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b0d11;
+  --surface: #14171d;
+  --surface-2: #1a1e25;
+  --border: #262b33;
+  --text: #edeff3;
+  --text-2: #99a1ac;
+  --text-3: #5f6772;
+  --accent: #6ea8f0;
+  --accent-ink: #0a1a33;
+  --accent-wash: #6ea8f026;
+  --good: #4fae7a;
+  --good-wash: #4fae7a26;
+  --warn: #d9a93f;
+  --warn-wash: #d9a93f26;
+  --bad: #e2564a;
+  --bad-wash: #e2564a26;
+  --grid-line: #ffffff08;
+}
+
+:root[data-theme="light"] {
+  --bg: #f3f1f4;
+  --surface: #ffffff;
+  --surface-2: #f7f5f8;
+  --border: #e1dce4;
+  --text: #201a22;
+  --text-2: #5b5460;
+  --text-3: #8b8590;
+  --accent: #2a4e99;
+  --accent-ink: #ffffff;
+  --accent-wash: #2a4e9914;
+  --good: #2e8f5c;
+  --good-wash: #2e8f5c14;
+  --warn: #a87c1f;
+  --warn-wash: #a87c1f14;
+  --bad: #c23b2e;
+  --bad-wash: #c23b2e14;
+  --grid-line: #00000006;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background:
+    linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0 / 100% 32px,
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 32px 100%,
+    var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
